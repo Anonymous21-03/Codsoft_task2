@@ -1,0 +1,311 @@
+/* General styles */
+* {
+    padding: 0;
+    margin: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* Navbar styles */
+.navbar {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+}
+
+.navbar.scrolled {
+    background-color: #00090ff8;
+}
+
+.logo {
+    height: 100%;
+    width: 200px;
+    overflow: hidden;
+}
+
+.logo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+
+.mid-options, .right-options {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    align-items: center;
+}
+
+.mid-options {
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.right-options {
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+.mid-options li, .right-options li {
+    position: relative;
+    padding: 0 20px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.mid-options li:hover, .right-options li:hover {
+    color: cyan;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+}
+
+/* Dropdown styles */
+.features-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #00090ff8;
+    list-style: none;
+    padding: 10px 0;
+    min-width: 200px;
+    border-radius: 0 0 5px 5px;
+}
+
+.features:hover .features-dropdown {
+    display: block;
+}
+
+.features-dropdown li {
+    padding: 10px 20px;
+}
+
+.features-dropdown li:hover {
+    background-color: #001a2c;
+}
+
+/* Homepage styles */
+.body-container {
+    padding: 6% 1%;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+    height: 100vh;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro .heading {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.intro .heading .compname {
+    justify-items: center;
+    text-align: center;
+    font-size: 5rem;
+    padding-bottom: 0.5%;
+    padding-top: 5%;
+}
+
+.intro .heading p {
+    font-size: 1.2rem;
+    padding: 2%;
+    width: 60%;
+    text-align: center;
+    margin: 1% auto;
+}
+
+.bg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./satbg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.custom-button {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 25px;
+}
+
+.custom-button:hover {
+    background-color: rgba(128, 128, 128, 0.5);
+}
+
+/* Features styles */
+.container-feature {
+    min-height: 80vh;
+    margin-top: 10%;
+    padding: 5% 2%;
+    background: #1f1f1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2%;
+    background-image: url('./cosmos-1853491_1280.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.container-feature .feature {
+    flex: 0 1 30%;
+    min-height: 400px;
+    color: #ffffff;
+    text-align: center;
+    border: 2px solid #ffffff;
+    border-radius: 1em;
+    padding: 1%;
+    margin-bottom: 2%;
+    position: relative;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgba(9, 8, 118, 0.372);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.card::before,
+.card::after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: black;
+    transition: all 0.5s;
+}
+
+.card::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+}
+
+.card::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100% 0 15px;
+}
+
+.card:hover::before,
+.card:hover::after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+.card .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.card:hover .title {
+    opacity: 0;
+}
+
+.card .content {
+    padding: 20px;
+    z-index: 2;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card:hover .content {
+    opacity: 1;
+}
+
+.feature .getStarted {
+    margin-top: 20px;
+}
+
+.feature .getStarted button {
+    padding: 10px 20px;
+    border: 2px solid #ffffff;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.feature .getStarted button:hover {
+    color: #00ffff;
+    border-color: #00ffff;
+    background-color: rgba(0, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    .container-feature .feature {
+        flex: 0 1 100%;
+    }
+}

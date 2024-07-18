@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISMEA - Satellite Image Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./download.jpeg" alt="logo">
+        </div>
+        <ul class="mid-options">
+            <li class="home"><a href="/"><i class="fas fa-home"></i> Home</a></li>
+            <li class="about"><a href="/about"><i class="fas fa-question-circle"></i> About</a></li>
+            <li class="upload"><a href="/contact"><i class="fas fa-upload"></i> Contact</a></li>
+            <li class="features">
+                <a href="#"><i class="fas fa-beer"></i> Features</a>
+                <ul class="features-dropdown">
+                    <li><a href="/landcover">Land Cover Classification</a></li>
+                    <li><a href="/ChangeDetection">Change Detection</a></li>
+                    <li><a href="/VegetationMonitoring">Vegetation Monitoring</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="right-options">
+            <li class="signup"><a href="/register"><i class="fas fa-user"></i> Sign Up</a></li>
+            <li class="signin"><a href="/Login"><i class="fas fa-sign-in-alt"></i> Sign In</a></li>
+        </ul>
+    </nav>
+
+    <div class="body-container">
+        <div class="bg-container"></div>
+        <div class="intro">
+            <div class="heading">
+                <h1 class="compname">ISMEA</h1>
+                <p>
+                    In the realm of satellite image analysis, conventional approaches
+                    often categorize features into distinct classes. However, the
+                    real-world scenarios are often more intricate. This project aims to
+                    revolutionize the understanding of satellite imagery by employing a
+                    web-based platform integrated with machine learning, specifically
+                    focusing on aspects such as vegetation health, soil health, and
+                    other relevant parameters.
+                </p>
+                <div class="getStarted">
+                    <button class="custom-button" id="getStartedBtn">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-feature" id="features">
+        <div class="feature">
+            <div class="card">
+                <div class="title">Land Cover Classification</div>
+                <div class="content">
+                    <p>
+                        Land cover classification categorizes Earth's surface into distinct
+                        types like water, forest, or urban areas. This process, often aided
+                        by satellite imagery and machine learning, helps us understand and
+                        monitor land use patterns, analyze environmental changes, and make
+                        informed decisions about resource management.
+                    </p>
+                    <div class="getStarted">
+                        <a href="/landcover"><button>Try Land cover classification</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="feature">
+            <div class="card">
+                <div class="title">Change Detection</div>
+                <div class="content">
+                    <p>
+                        Change detection in satellite imagery analyzes differences between
+                        images of the same area captured at different times. It helps us
+                        identify modifications like deforestation, urban expansion, or
+                        natural disasters. This valuable information supports various
+                        fields, including environmental monitoring, urban planning, and
+                        disaster management, allowing us to track changes over time and make
+                        informed decisions for a sustainable future.
+                    </p>
+                    <div class="getStarted">
+                        <a href="/changedetection"><button>Try Change Detection</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="feature">
+            <div class="card">
+                <div class="title">Vegetation Monitoring</div>
+                <div class="content">
+                    <p>
+                        Satellites act as our watchful eyes, monitoring the health of
+                        Earth's vegetation. From vast forests to local farms, they reveal
+                        subtle changes in health, like drought stress or deforestation. This
+                        information empowers us to protect and manage this vital resource.
+                    </p>
+                    <div class="getStarted">
+                        <a href="/vegetationmonitoring"><button>Try Vegetation Monitoring</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
